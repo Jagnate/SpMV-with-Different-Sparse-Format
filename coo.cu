@@ -31,9 +31,6 @@ struct COOMatrix {
         delete[] values;
     }
 
-    COOMatrix(const COOMatrix&) = delete;
-    COOMatrix& operator=(const COOMatrix&) = delete;
-
     COOMatrix(COOMatrix&& other) noexcept {
         *this = std::move(other);
     }
